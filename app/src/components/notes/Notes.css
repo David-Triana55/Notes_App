@@ -1,0 +1,10 @@
+.container-notes {
+  place-items: center;
+  padding: 10px;
+  list-style: none;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
