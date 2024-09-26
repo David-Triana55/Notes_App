@@ -11,6 +11,7 @@ loginRouter.post('/', async (req, res, next) => {
     const { username, password } = req.body
     // obtenemos los valores de la peticion y hacemos una consulta a la base de datos
     const user = await User.findOne({ username })
+    console.log(req.body)
 
     // Si el usuario no se encuentra, respondemos con un error
 
@@ -34,6 +35,7 @@ loginRouter.post('/', async (req, res, next) => {
     // options: configuración del token
 
     const token = jwt.sign(userForToken, process.env.SECRET)
+    console.log(token)
 
     // Respondemos con los detalles del usuario si la autenticación es correcta
     res.json({
@@ -42,6 +44,7 @@ loginRouter.post('/', async (req, res, next) => {
       token
     })
   } catch (error) {
+    console.log(error)
     // Pasamos el error al middleware de manejo de errores
     next(error)
   }
