@@ -1,7 +1,3 @@
-Con la información de los endpoints que proporcionaste, aquí tienes el README actualizado con los detalles de la API:
-
----
-
 # 📒 Notas App
 
 Una aplicación de notas creada con **React** para el frontend y **Node.js/Express** para el backend. La aplicación está completamente testeada con **Cypress** para pruebas E2E.
@@ -52,6 +48,3 @@ Una aplicación de notas creada con **React** para el frontend y **Node.js/Expre
 | GET    | `/api/users`        | Obtiene los detalles del usuario autenticado  |
 | POST   | `/api/login`        | Inicia sesión de usuario                      |
 
----
-
-Si deseas realizar más modificaciones o agregar información adicional, ¡házmelo saber!
