@@ -1,6 +1,6 @@
 describe('note app', function () {
   this.beforeEach(() => {
-    cy.visit('http://192.168.0.7:5173/')
+    cy.visit('http://localhost:5174')
     cy.request('POST', 'http://localhost:3008/api/testing/reset')
 
     const user = {
@@ -13,7 +13,7 @@ describe('note app', function () {
   })
 
   it('login form can be opened', () => {
-    const buton = cy.get('.container-form--icon')
+    const buton = cy.get('.container-form .container-form--icon')
     buton.click()
     cy.contains('You need to login')
   })
@@ -42,10 +42,10 @@ describe('note app', function () {
   })
 
   describe('when logged in', () => {
-    this.beforeEach(() => {
-      cy.login({ username: 'juan', password: '12345' })
-    })
     it('a new note can be created', () => {
+      cy.get('[name="user"]').type('juan')
+      cy.get('[name="password"]').type('12345')
+      cy.contains('Login').click()
       cy.get('.open-modal').click()
       cy.contains('Create a new note')
       cy.get('[placeholder="Write your note..."]').type('a note created by cypress')

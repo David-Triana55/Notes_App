@@ -1,7 +1,10 @@
 import axios from 'axios'
 
-const baseUrl = '/api/notes'
-const getNoteUser = '/api/users/'
+const port = 3008
+
+const baseUrl = `http://localhost:${port}/api/notes`
+
+const getNoteUser = `http://localhost:${port}/api/users/`
 
 // Las funciones `getAll`, `create`, `update`, `remove` funcionarían igual, solo que apuntando directamente a la URL completa
 

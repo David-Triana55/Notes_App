@@ -1,6 +1,8 @@
 import { useStore } from '../../store/store'
 import { Note } from '../Note/Note'
 import './Notes.css'
+import * as React from 'react'
+
 export function Notes () {
   const notes = useStore(state => state.notes)
 

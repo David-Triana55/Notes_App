@@ -1,5 +1,6 @@
 import { IoMdAddCircle } from 'react-icons/io'
 import { useStore } from '../../store/store'
+import * as React from 'react'
 
 export function ButtonAddNote ({ modal, setModal }) {
   const user = useStore(state => state.user)

@@ -1,5 +1,6 @@
 import { useStore } from '../../store/store'
 import './Header.css'
+import * as React from 'react'
 export const Header = () => {
   const user = useStore(state => state.user)
   const loginVisible = useStore(state => state.loginVisible)

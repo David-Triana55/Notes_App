@@ -1,6 +1,7 @@
 import { Modal } from '../Modal/Modal'
 import './CreateNote.css'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
 import { create } from '../../services/notes'
 import { useStore } from '../../store/store'
 export function CreateNote ({ onClick }) {
